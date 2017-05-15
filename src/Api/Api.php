@@ -18,6 +18,9 @@ final class Api
     /** @var bool */
     private $isAuthenticated = false;
 
+    /** @var GuzzleClient */
+    private $guzzleClient;
+
     public function __construct(GuzzleClient $guzzleClient, string $endpoint)
     {
         $this->endpoint = trim($endpoint, " \t\n\r\0\x0B/");

@@ -6,6 +6,7 @@ use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Cookie\CookieJar;
 use GuzzleHttp\Cookie\SetCookie;
 use GuzzleHttp\Psr7\Response;
+use Psr\Http\Message\ResponseInterface;
 
 final class Api
 {
@@ -68,7 +69,7 @@ final class Api
         return $this->sessionCookie instanceof SetCookie;
     }
 
-    private function updateSessionCookieFromResponse(Response $response): void
+    private function updateSessionCookieFromResponse(ResponseInterface $response): void
     {
         $this->sessionCookie = SetCookie::fromString($response->getHeaderLine('Set-Cookie'));
     }

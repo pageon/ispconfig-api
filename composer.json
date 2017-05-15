@@ -19,5 +19,15 @@
             "email": "jelmer@pageon.be"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Pageon\\IspconfigApi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pageon\\IspconfigApi\\Tests\\": "tests/"
+        }
+    }
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace Pageon\IspconfigApi\Client;
+namespace Pageon\IspconfigApi\Account;
 
 use Pageon\IspconfigApi\Api\Api;
 
-final class Client
+final class Account
 {
     /** @var Api */
     private $api;

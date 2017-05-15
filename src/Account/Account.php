@@ -39,8 +39,8 @@ final class Account
                 'form_params' => [
                     'username' => $this->username,
                     'password' => $this->password,
-                    's_mod' => "login",
-                    's_pg' => "index",
+                    's_mod' => 'login',
+                    's_pg' => 'index',
                 ],
             ]
         );

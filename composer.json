@@ -1,0 +1,23 @@
+{
+    "name": "pageon/ispconfig-api",
+    "description": "An api wrapper for ispconfig",
+    "keywords": [
+        "ispconfig",
+        "api-wrapper",
+        "php"
+    ],
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^6.1",
+        "pds/skeleton": "^1.0"
+    },
+    "homepage": "http://pageon.be",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jelmer Prins",
+            "email": "jelmer@pageon.be"
+        }
+    ],
+    "require": {}
+}

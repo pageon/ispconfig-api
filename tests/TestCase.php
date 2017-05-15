@@ -2,8 +2,13 @@
 
 namespace Pageon\IspconfigApi\Tests;
 
+use Pageon\IspconfigApi\Client\Client;
+
 class TestCase extends \PHPUnit\Framework\TestCase
 {
+    /** @var Client */
+    private static $client;
+
     public function assertPreConditions(): void
     {
         $this->assertNotEmpty(
@@ -18,5 +23,20 @@ class TestCase extends \PHPUnit\Framework\TestCase
             getenv('PAGEON_ISPCONFIG_TEST_PASSWORD'),
             'The environment variable PAGEON_ISPCONFIG_TEST_PASSWORD needs to contain the password to test with'
         );
+    }
+
+    protected static function getClient(): Client
+    {
+        if (self::$client instanceof Client) {
+            return self::$client;
+        }
+
+        self::$client = new Client(
+            getenv('PAGEON_ISPCONFIG_TEST_ENDPOINT'),
+            getenv('PAGEON_ISPCONFIG_TEST_USERNAME'),
+            getenv('PAGEON_ISPCONFIG_TEST_PASSWORD')
+        );
+
+        return self::$client;
     }
 }

@@ -44,11 +44,11 @@ final class Client
         }
 
         // make sure we have a session cookie
-        $this->call('GET', $this->endpoint . '/login');
+        $this->call('GET', 'login');
 
         $this->call(
             'POST',
-            $this->endpoint . '/login/index.php',
+            '/login/index.php',
             [
                 'form_params' => [
                     'username' => $this->username,
@@ -58,6 +58,11 @@ final class Client
                 ],
             ]
         );
+    }
+
+    public function logout(): void
+    {
+        $this->call('GET', 'login/logout.php');
     }
 
     public function isLoggedIn(): bool
@@ -75,11 +80,11 @@ final class Client
         $this->sessionCookie = SetCookie::fromString($response->getHeaderLine('Set-Cookie'));
     }
 
-    private function call(string $method, string $endpoint, array $options = []): Response
+    private function call(string $method, string $endpoint = 'index.php', array $options = []): Response
     {
         $response = $this->guzzleClient->request(
             $method,
-            $endpoint,
+            $this->endpoint . '/' . trim($endpoint, '/'),
             $this->buildCallOptions($options)
         );
 

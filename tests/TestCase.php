@@ -32,6 +32,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
         }
 
         self::$client = new Client(
+            new \GuzzleHttp\Client(),
             getenv('PAGEON_ISPCONFIG_TEST_ENDPOINT'),
             getenv('PAGEON_ISPCONFIG_TEST_USERNAME'),
             getenv('PAGEON_ISPCONFIG_TEST_PASSWORD')

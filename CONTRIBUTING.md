@@ -24,6 +24,11 @@ We accept contributions via Pull Requests on [Github](https://github.com/pageon/
 
 ```
 
+In order to run the tests you will need to make sure the following environment vars are available
+* **PAGEON_ISPCONFIG_TEST_ENDPOINT** (the url of ispconfig without the index.php on the end)
+* **PAGEON_ISPCONFIG_TEST_USERNAME** (the username of your test account)
+* **PAGEON_ISPCONFIG_TEST_PASSWORD** (the password of your test account)
+
 ## How to submit pull requests
 
 To be able to submit pull requests, you should have (a little) knowledge of git. The most useful commands will be included, but it's advised to read [Pro git](http://git-scm.com/book/en/v2). It's one of the most complete guides.

@@ -25,3 +25,9 @@ We use phpunit as a test framework. It's installed when using composer install.
 Running the tests:
 
     ./vendor/bin/phpunit
+
+
+In order to run the tests you will need to make sure the following environment vars are available
+* **PAGEON_ISPCONFIG_TEST_ENDPOINT** (the url of ispconfig without the index.php on the end)
+* **PAGEON_ISPCONFIG_TEST_USERNAME** (the username of your test account)
+* **PAGEON_ISPCONFIG_TEST_PASSWORD** (the password of your test account)

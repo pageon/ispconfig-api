@@ -30,7 +30,7 @@ final class Account
         }
 
         // make sure we have a session cookie
-        $this->api->call('GET', 'login');
+        $this->api->call('GET', 'login/index.php');
 
         $this->api->call(
             'POST',

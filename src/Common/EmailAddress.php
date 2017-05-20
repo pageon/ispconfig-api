@@ -10,7 +10,7 @@ final class EmailAddress
     /** @var string */
     private $address;
 
-    public function __construct($address)
+    public function __construct(string $address)
     {
         if (!filter_var($address, FILTER_VALIDATE_EMAIL)) {
             throw new InvalidArgumentException(sprintf('"%s" is not a valid email', $address));

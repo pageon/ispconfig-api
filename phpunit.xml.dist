@@ -10,6 +10,9 @@
 >
     <php>
         <ini name="error_reporting" value="-1" />
+        <env name="PAGEON_ISPCONFIG_TEST_PASSWORD" value="[fill in]"/>
+        <env name="PAGEON_ISPCONFIG_TEST_USERNAME" value="[fill in]"/>
+        <env name="PAGEON_ISPCONFIG_TEST_ENDPOINT" value="[fill in]"/>
     </php>
 
     <testsuites>
